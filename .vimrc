@@ -18,6 +18,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,6 +46,17 @@ set laststatus=2
 " Maps
 map ; :Files<CR>
 map <C-n> :NERDTreeToggle<CR>
+map <C-B> :Buffers<CR>
+
+" Shift select
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
 
 " Color scheme
 colorscheme evening
@@ -87,16 +99,6 @@ set expandtab
 " Habilita indentação/alinhamento inteligente
 set smarttab
 
-" Shift select
-nmap <S-Up> v<Up>
-nmap <S-Down> v<Down>
-nmap <S-Left> v<Left>
-nmap <S-Right> v<Right>
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
-
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -107,4 +109,6 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+
 
