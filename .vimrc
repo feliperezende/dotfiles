@@ -99,6 +99,12 @@ set expandtab
 " Habilita indentação/alinhamento inteligente
 set smarttab
 
+" highlight linha atual
+set cursorline
+
+" fix file identation 
+map <F6> gg=G<C-o><C-o>
+
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
