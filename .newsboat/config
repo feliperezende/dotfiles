@@ -1,0 +1,3 @@
+download-path "~/Music/%h/%n"
+player "mp3blaster"
+browser "open -a Safari %u"
