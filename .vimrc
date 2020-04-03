@@ -19,6 +19,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ervandew/supertab'
+Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
