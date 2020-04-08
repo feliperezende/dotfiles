@@ -20,6 +20,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ervandew/supertab'
 Plugin 'vimwiki/vimwiki'
+Plugin 'wadackel/vim-dogrun'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,7 +61,7 @@ vmap <S-Left> <Left>
 vmap <S-Right> <Right>
 
 " Color scheme
-colorscheme evening
+colorscheme dogrun
 
 " Automatically change the current directory
 set autochdir
@@ -105,6 +106,12 @@ set cursorline
 
 " fix file identation 
 map <F6> gg=G<C-o><C-o>
+
+"ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" Flagging Unnecessary Whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let g:lightline = {
       \ 'colorscheme': 'powerline',
