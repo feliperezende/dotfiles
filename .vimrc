@@ -21,6 +21,10 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'ervandew/supertab'
 Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
+Plugin 'atahabaki/archman-vim'
+Plugin 'jdsimcoe/hyper.vim'
+Plugin 'tweekmonster/django-plus.vim'
+Plugin 'ajh17/Spacegray.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,13 +59,18 @@ nmap <S-Up> v<Up>
 nmap <S-Down> v<Down>
 nmap <S-Left> v<Left>
 nmap <S-Right> v<Right>
+
+" now pressing n key will move a line down and m will move a line up.
+nmap n :m +1<CR>
+nmap m :m -2<CR>
+
 vmap <S-Up> <Up>
 vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
 
 " Color scheme
-colorscheme dogrun
+colorscheme spacegray
 
 " Automatically change the current directory
 set autochdir
@@ -109,9 +118,6 @@ map <F6> gg=G<C-o><C-o>
 
 "ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
-
-" Flagging Unnecessary Whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let g:lightline = {
       \ 'colorscheme': 'powerline',
