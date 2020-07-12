@@ -130,5 +130,7 @@ let g:lightline = {
       \ },
       \ }
 
-
+if has('gui_running')
+    set guifont=Monaco:h14
+endif
 
