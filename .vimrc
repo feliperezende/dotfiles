@@ -47,12 +47,19 @@ syntax on
 " Line numbers
 set nu 
 
+" To display the status line always
 set laststatus=2
+
+" To highlight all search matches
+set hlsearch
 
 " Maps
 map ; :Files<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-B> :Buffers<CR>
+
+" Clear last search highlighting
+map <Space> :noh<CR>
 
 " Shift select
 nmap <S-Up> v<Up>
@@ -60,14 +67,40 @@ nmap <S-Down> v<Down>
 nmap <S-Left> v<Left>
 nmap <S-Right> v<Right>
 
-" now pressing n key will move a line down and m will move a line up.
-nmap n :m +1<CR>
-nmap m :m -2<CR>
-
 vmap <S-Up> <Up>
 vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
+
+" In normal mode or in insert mode, press Alt-j to move the current line down, or press Alt-k to move the current line up.
+" After visually selecting a block of lines (for example, by pressing V then moving the cursor down), press Alt-j to move the whole block down, or press Alt-k to move the block up. 
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" To Mac users out there: for mapping ALT+hjkl, use instead the real character generated
+" ABNT2 keyboard
+nnoremap ʝ :m .+1<CR>==
+nnoremap ĸ :m .-2<CR>==
+inoremap ʝ <Esc>:m .+1<CR>==gi
+inoremap ĸ <Esc>:m .-2<CR>==gi
+vnoremap ʝ :m '>+1<CR>gv=gv
+vnoremap ĸ :m '<-2<CR>gv=gv
+
+" To Mac users out there: for mapping ALT+hjkl, use instead the real character generated
+" US International keyboard
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
+" fix file identation 
+map <F6> gg=G<C-o><C-o>
 
 " Color scheme
 colorscheme spacegray
@@ -94,7 +127,6 @@ set autoindent
 set number
 
 " Opções de indentação, aqui você pode mudar como preferir
-
 " Número de espaços visíveis por TAB
 set tabstop=4
 
@@ -112,9 +144,6 @@ set smarttab
 
 " highlight linha atual
 set cursorline
-
-" fix file identation 
-map <F6> gg=G<C-o><C-o>
 
 "ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
