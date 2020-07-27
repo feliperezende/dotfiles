@@ -48,6 +48,9 @@ syntax on
 " Line numbers
 set nu 
 
+" Mouse selection on terminal
+set mouse=a
+
 " To display the status line always
 set laststatus=2
 
