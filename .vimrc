@@ -20,12 +20,14 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ervandew/supertab'
 Plugin 'vimwiki/vimwiki'
-Plugin 'wadackel/vim-dogrun'
-Plugin 'atahabaki/archman-vim'
-Plugin 'jdsimcoe/hyper.vim'
 Plugin 'tweekmonster/django-plus.vim'
-Plugin 'ajh17/Spacegray.vim'
 Plugin 'mhinz/vim-startify'
+
+" Temas
+Plugin 'wadackel/vim-dogrun'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'jdsimcoe/hyper.vim'
+Plugin 'atahabaki/archman-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
