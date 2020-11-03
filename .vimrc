@@ -44,6 +44,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+" Yank to system clipboard. 
+" More options: http://vimdoc.sourceforge.net/htmldoc/options.html#'clipboard'
+set clipboard=unnamed
+
 " Syntax on
 syntax on
 
@@ -52,6 +57,10 @@ set nu
 
 " Mouse selection on terminal
 set mouse=a
+
+" Set this to the name of your terminal that supports mouse codes.
+" Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
+set ttymouse=xterm2
 
 " To display the status line always
 set laststatus=2
