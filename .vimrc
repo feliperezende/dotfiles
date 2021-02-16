@@ -55,6 +55,10 @@ syntax on
 " Line numbers
 set nu 
 
+" Set relative line numbers, makes it easier to copy, delete lines. 
+" ex.: d5j - delete 5 lines below
+set relativenumber
+
 " Mouse selection on terminal
 set mouse=a
 
